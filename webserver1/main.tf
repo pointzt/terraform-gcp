@@ -1,25 +1,7 @@
-# Configure the Google Cloud provider
-provider "google" {
-  project = "terraform-examples-gcloud"
-  region  = "us-east1"
-}
-
-# Create a Google Compute Firewall
-resource "google_compute_firewall" "instance" {
-  name    = "terraform-example-instance"
-  network = "default"
-
-  source_ranges = ["0.0.0.0/0"]
-
-  allow {
-    protocol = "tcp"
-    ports    = ["8080"]
-  }
-}
 
 # Create a Google Compute instance
 resource "google_compute_instance" "example" {
-  name          = "example"
+  name          = "gary-vm"
   machine_type  = "e2-micro"
   zone          = "us-central1-a"
   
