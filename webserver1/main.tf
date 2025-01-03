@@ -41,8 +41,3 @@ resource "google_compute_instance" "example" {
   
   metadata_startup_script = "echo 'Hello, World' > index.html ; nohup busybox httpd -f -p 8080 &"
 }
-
-# Output variable: Public IP address
-output "public_ip" {
-  value = "${google_compute_instance.example.network_interface.0.access_config.0.assigned_nat_ip}"
-}
