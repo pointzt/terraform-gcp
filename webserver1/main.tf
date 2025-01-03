@@ -7,7 +7,7 @@ resource "google_compute_instance" "example" {
   
   boot_disk {
     initialize_params {
-      image = "ubuntu-1604-lts"
+      image = "ubuntu-2004-focal-arm64-v20241219"
     }
   }
   
