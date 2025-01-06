@@ -1,5 +1,9 @@
 # Create a Google Compute instance
 
+resource "google_compute_network" "vpc_network" {
+  name = "terraform-network"
+}
+
 resource "google_compute_instance" "default" {
   name         = "gary-vm"
   machine_type = "e2-micro"
@@ -12,7 +16,8 @@ resource "google_compute_instance" "default" {
   }
 
   network_interface {
-    network = "default"
+    network = "terraform-network"
     access_config {}
   }
 }
+
