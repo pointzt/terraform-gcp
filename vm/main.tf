@@ -1,7 +1,7 @@
 # Create a Google Compute instance
 
 
-resource "google_compute_instance" "vpc_network" {
+resource "google_compute_instance" "default" {
   name         = "gary-vm"
   machine_type = "e2-micro"
   zone         = "us-central1-a"
