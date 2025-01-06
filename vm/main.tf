@@ -4,7 +4,7 @@ resource "google_compute_network" "vpc_network" {
   name = "terraform-network"
 }
 
-resource "google_compute_instance" "default" {
+resource "google_compute_instance" "vpc_network" {
   name         = "gary-vm"
   machine_type = "e2-micro"
   zone         = "us-central1-a"
