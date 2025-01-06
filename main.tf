@@ -16,7 +16,7 @@
 
 # [START compute_instances_quickstart]
 resource "google_compute_instance" "default" {
-  name         = "gary-vm"
+  name         = "gary-vm2"
   machine_type = "e2-micro"
   zone         = "us-central1-a"
 
